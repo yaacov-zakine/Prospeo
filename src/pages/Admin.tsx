@@ -1,8 +1,7 @@
-
 import React, { useState, useEffect } from 'react'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { supabase } from '@/integrations/supabase/client'
-import { Tables } from '@/integrations/supabase/types'
+import { Tables } from '@/types/database'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -63,7 +62,7 @@ const Admin = () => {
       case 'en attente':
         return 0
       case 'en cours de prod':
-        return 50  // Fixed: was returning 500
+        return 50
       case 'livré':
         return 100
       default:
