@@ -32,8 +32,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         
         // For now, we'll set a default role since user_roles table doesn't exist
         if (session?.user) {
-          // You can implement role fetching logic here when user_roles table is created
-          setUserRole('user')
+          // Check if user is admin based on email (temporary solution)
+          const isAdminUser = session.user.email === 'admin@prospeo.com'
+          setUserRole(isAdminUser ? 'admin' : 'user')
         } else {
           setUserRole(null)
         }
@@ -46,6 +47,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session)
       setUser(session?.user ?? null)
+      if (session?.user) {
+        const isAdminUser = session.user.email === 'admin@prospeo.com'
+        setUserRole(isAdminUser ? 'admin' : 'user')
+      }
       setLoading(false)
     })
 
