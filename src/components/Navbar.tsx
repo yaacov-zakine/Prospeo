@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-4">
             <Link to="/" className="text-xl font-bold text-gray-800">
-              Prospects B2B
+              Prospeo
             </Link>
             {isAdmin && (
               <Link to="/admin">

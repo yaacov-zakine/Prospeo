@@ -14,7 +14,7 @@ const Index = () => {
           Bienvenue, {user?.user_metadata?.full_name || user?.email}
         </h1>
         <p className="text-xl text-gray-600 mb-8">
-          Plateforme B2B Prospects - Gestion de campagnes
+          Prospeo - Plateforme de génération de prospects
         </p>
         
         <div className="flex gap-4 justify-center">
