@@ -1,18 +1,25 @@
 
 import * as React from "react"
 
-const TOAST_LIMIT = 1
-const TOAST_REMOVE_DELAY = 1000000
+type ToastProps = {
+  title?: string
+  description?: string
+  variant?: "default" | "destructive"
+}
 
-type ToasterToast = {
+type ToastActionElement = React.ReactElement
+
+type Toast = ToastProps & {
   id: string
   title?: React.ReactNode
   description?: React.ReactNode
-  action?: React.ReactElement
-  variant?: "default" | "destructive"
-  open?: boolean
-  onOpenChange?: (open: boolean) => void
+  action?: ToastActionElement
 }
+
+const TOAST_LIMIT = 1
+const TOAST_REMOVE_DELAY = 1000000
+
+type ToasterToast = Toast
 
 const actionTypes = {
   ADD_TOAST: "ADD_TOAST",
