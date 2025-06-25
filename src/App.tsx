@@ -17,7 +17,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
         <Router>
-          <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50">
+          <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
             <Navbar />
             <Routes>
               <Route path="/auth" element={<Auth />} />
