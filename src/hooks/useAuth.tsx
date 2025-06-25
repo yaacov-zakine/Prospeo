@@ -30,23 +30,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setSession(session)
         setUser(session?.user ?? null)
         
+        // For now, we'll set a default role since user_roles table doesn't exist
         if (session?.user) {
-          // Fetch user role after auth state change
-          setTimeout(async () => {
-            try {
-              const { data, error } = await supabase
-                .from('user_roles')
-                .select('role')
-                .eq('user_id', session.user.id)
-                .single()
-              
-              if (!error && data) {
-                setUserRole(data.role)
-              }
-            } catch (err) {
-              console.error('Error fetching user role:', err)
-            }
-          }, 0)
+          // You can implement role fetching logic here when user_roles table is created
+          setUserRole('user')
         } else {
           setUserRole(null)
         }
