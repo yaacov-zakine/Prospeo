@@ -1,18 +1,13 @@
-
 {
   "name": "plateforme-b2b-prospects",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-
-    "build:dev": "vite build --mode development",
-    "dev": "next dev --turbopack",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
-
     "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-label": "^2.1.7",
     "@radix-ui/react-progress": "^1.1.7",
@@ -21,38 +16,26 @@
     "@radix-ui/react-toast": "^1.2.14",
     "@supabase/supabase-js": "^2.50.2",
     "@tanstack/react-query": "^5.81.2",
-    "@types/node": "^24.0.4",
-    "@vitejs/plugin-react": "^4.6.0",
-    "autoprefixer": "^10.4.21",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lovable-tagger": "^1.1.8",
     "lucide-react": "^0.523.0",
     "next": "15.3.4",
-    "postcss": "^8.5.6",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-router-dom": "^7.6.2",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "tailwind-merge": "^3.3.1",
-    "vite": "^5.4.19"
+    "@shadcn/ui": "latest"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4.1.10",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.4",
-    "tailwindcss": "^3.4.17"
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "@shadcn/ui": "latest",
-    "lucide-react": "latest"
-  },
-  "devDependencies": {
+    "@types/node": "^24.0.4",
     "typescript": "latest",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "15.3.4",
+    "prettier": "latest",
+    "husky": "latest",
+    "lint-staged": "latest",
     "tailwindcss": "latest",
     "postcss": "latest",
     "autoprefixer": "latest"
   }
 }
-
