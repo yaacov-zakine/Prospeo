@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { supabase } from '../integrations/supabase/client'
@@ -48,7 +49,7 @@ const Admin = () => {
       queryClient.invalidateQueries({ queryKey: ['admin-campaigns'] })
       toast({ title: 'Campagne mise à jour avec succès' })
     },
-    onError: (error) => {
+    onError: (error: Error) => {
       toast({ 
         title: 'Erreur', 
         description: error.message,
@@ -62,7 +63,7 @@ const Admin = () => {
       case 'en attente':
         return 0
       case 'en cours de prod':
-        return 50  // Fixed: was returning 500
+        return 50
       case 'livré':
         return 100
       default:
