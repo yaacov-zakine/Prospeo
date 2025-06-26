@@ -1,24 +1,18 @@
 
 import React from 'react'
-import { useAuth } from '../hooks/useAuth'
-import Dashboard from '../components/Dashboard'
 
 const Index = () => {
-  const { user } = useAuth()
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-8">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Bienvenue, {user?.user_metadata?.full_name || user?.email}
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Prospeo - Plateforme de génération de prospects
+        <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">
+          Plateforme B2B Prospects
+        </h1>
+        <div className="max-w-md mx-auto bg-white/80 backdrop-blur-sm rounded-lg shadow-lg p-6">
+          <p className="text-center text-gray-600">
+            Bienvenue sur la plateforme de gestion de prospects B2B
           </p>
         </div>
-        
-        <Dashboard />
       </div>
     </div>
   )
